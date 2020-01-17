@@ -1,0 +1,7 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+  - name: install adobereader
+    win_chocolatey:
+      name: adobereader
+      state: present

@@ -1,0 +1,15 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+  - win_chocolatey:
+      name: adobereader
+      state: present
+  - win_chocolatey:
+      name: filezilla
+      state: present
+  - win_chocolatey:
+      name: notepadplusplus.install
+      state: present
+  - win_updates:
+      category_names: CriticalUpdates
+      register: wuout

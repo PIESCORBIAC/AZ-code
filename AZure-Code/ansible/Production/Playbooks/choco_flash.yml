@@ -1,0 +1,7 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+  - name: install flashplayer
+    win_chocolatey:
+      name: flashplayerplugin
+      state: present
